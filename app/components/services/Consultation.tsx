@@ -17,7 +17,7 @@ export default function ConsultationSection() {
 
         <button
           type="button"
-          className="w-full sm:w-auto px-10 sm:px-12 py-4 font-sans text-xs sm:text-sm font-semibold tracking-[0.2em] text-white uppercase rounded-sm bg-gradient-to-r from-[#c5a059] via-[#bdbcbc] to-[#787575] hover:opacity-95 shadow-[0_10px_25px_rgba(0,0,0,0.1)] transition-all duration-300 transform active:scale-[0.99]"
+          className="w-full sm:w-auto px-10 sm:px-12 py-4 font-sans text-xs sm:text-sm font-semibold tracking-[0.2em] text-white uppercase rounded-sm bg-[#c5a059] hover:opacity-95 shadow-[0_10px_25px_rgba(0,0,0,0.1)] transition-all duration-300 transform active:scale-[0.99]"
         >
           Book Free Consultation
         </button>
@@ -28,8 +28,7 @@ export default function ConsultationSection() {
           <div className="h-[1px] flex-1 bg-gray-300/80" />
         </div>
 
-        <a
-          href="tel:8777796060"
+        <p
           className="inline-flex items-center gap-4 sm:gap-5 group transition-colors duration-300"
         >
           <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-gray-300 bg-white shadow-sm group-hover:border-[#c5a059] transition-all duration-300 shrink-0">
@@ -38,7 +37,7 @@ export default function ConsultationSection() {
           <span className="font-serif text-2xl sm:text-4xl md:text-5xl font-normal text-[#2b221b] tracking-tight group-hover:text-[#c5a059] transition-colors duration-300 select-all">
             877-779-6060
           </span>
-        </a>
+        </p>
 
       </div>
     </section>

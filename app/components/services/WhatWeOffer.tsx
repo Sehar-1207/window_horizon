@@ -31,7 +31,7 @@ export default function WhatWeOffer() {
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal tracking-[0.15em] md:tracking-[0.2em] text-[#0d1b2a] uppercase">
           What We Offer
         </h2>
-        <div className="w-16 h-[2px] bg-gradient-to-r from-[#c5a059] via-[#bdbcbc] to-[#787575] mx-auto mt-4" />
+        <div className="w-16 h-[2px] bg-[#c5a059] mx-auto mt-4" />
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">

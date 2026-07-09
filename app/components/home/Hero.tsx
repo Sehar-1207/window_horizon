@@ -50,7 +50,7 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 w-full max-w-4xl mx-auto px-4 xs:px-6 text-center flex flex-col items-center select-none"
+        className="relative z-10 w-full max-w-4xl mx-auto px-4 text-center flex flex-col items-center select-none"
       >
         <motion.h1 
           variants={slideUpVariants}
@@ -73,11 +73,12 @@ export default function Hero() {
           Free In-Home Consultation • Shades, Blinds & Motorized Solutions
         </motion.p>
 
-        <motion.div variants={slideUpVariants} className="mt-8 w-sm xs:w-auto px-4 xs:px-0">
+        <motion.div variants={slideUpVariants} className="mt-8 w-full flex justify-center px-4">
           <motion.button 
             whileHover={{ scale: 1.02, y: -1 }}
             whileTap={{ scale: 0.98 }}
-            className={`${BRAND_GRADIENT} w-full xs:w-auto px-5 py-3.5 sm:px-10 sm:py-4 text-white font-sans text-[11px] sm:text-sm font-medium tracking-[0.12em] uppercase rounded-none shadow-xl flex items-center justify-center gap-2.5`}
+            className={`bg-[#c5a059] w-auto max-w-full px-6 sm:px-10 py-3.5 sm:py-4 text-white font-sans text-[11px] sm:text-sm font-medium tracking-[0.12em] uppercase rounded-none shadow-xl flex items-center justify-center gap-2.5 overflow-hidden text-ellipsis whitespace-nowrap`}
+            onClick={() => window.location.href = '/contact'}
           >
             <Calendar className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" strokeWidth={1.5} />
             <span className="truncate">Book Free Consultation</span>
@@ -88,12 +89,12 @@ export default function Hero() {
           href="tel:8777796060"
           variants={slideUpVariants}
           whileHover={{ scale: 1.03 }}
-          className="mt-6 flex items-center gap-2 text-white/90 font-serif text-sm sm:text-base md:text-lg tracking-wide hover:text-white transition-colors cursor-pointer"
+          className="mt-6 flex items-center justify-center gap-2 text-white/90 font-serif text-sm sm:text-base md:text-lg tracking-wide hover:text-white transition-colors cursor-pointer max-w-full px-4 overflow-hidden text-ellipsis whitespace-nowrap"
         >
           <span className="inline-flex items-center justify-center w-5 h-5 sm:w-7 sm:h-7 rounded-full border border-white/30 bg-white/5 backdrop-blur-sm flex-shrink-0">
             <Phone className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" strokeWidth={1.5} />
           </span>
-          <span className="tracking-widest text-xs sm:text-base">877-779-6060</span>
+          <span className="tracking-widest text-xs sm:text-base tabular-nums">877-779-6060</span>
         </motion.a>
       </motion.div>
     </section>

@@ -44,7 +44,7 @@ const FAQ_DATA: FAQItem[] = [
 ];
 
 export default function FrequentQuestions() {
-  const [openIndex, setOpenIndex] = useState<number | null>(6);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -107,16 +107,15 @@ export default function FrequentQuestions() {
           })}
         </div>
 
-        <div className="mt-16 flex flex-col items-center text-center select-none">
+        <div className="mt-16 flex flex-col items-center text-center px-4">
           <p className="text-[#5a4f43] font-serif text-sm sm:text-base tracking-wide mb-4">
             Have more questions? We&apos;re here to help!
           </p>
-          <a 
-            href="tel:8777796060"
-            className="inline-block bg-[#c5a059] hover:bg-[#c5a059] text-white font-sans text-xs sm:text-sm font-semibold tracking-[0.15em] uppercase px-8 py-3.5 shadow-md active:scale-[0.99] transition-all rounded-none"
+          <button 
+            className="inline-block max-w-full text-center bg-[#c5a059] hover:bg-[#b08c49] text-white font-sans text-xs sm:text-sm font-semibold tracking-[0.15em] uppercase px-6 sm:px-8 py-3.5 shadow-md active:scale-[0.99] transition-all rounded-none overflow-hidden text-ellipsis whitespace-nowrap"
           >
             CALL 877-779-6060
-          </a>
+          </button>
         </div>
 
       </div>

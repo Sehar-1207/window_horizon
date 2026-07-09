@@ -1,5 +1,9 @@
+import ConsultationBanner from "../components/contacts/Banner";
+import ContactSection from "../components/contacts/ContactForm";
+
 export default function Contact(){
     return<>
-    <h1 className="flex justify-center items-center p-12 m-12 text-2xl" >  Working in progress in contact US page</h1>
+    <ConsultationBanner/>
+    <ContactSection/>
     </>
 }
