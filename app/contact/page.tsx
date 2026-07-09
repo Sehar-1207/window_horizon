@@ -1,5 +1,5 @@
-import ConsultationBanner from "../components/contacts/Banner";
-import ContactSection from "../components/contacts/ContactForm";
+import ConsultationBanner from "../../components/contacts/Banner";
+import ContactSection from "../../components/contacts/ContactForm";
 
 export default function Contact(){
     return<>

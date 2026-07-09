@@ -1,23 +1,14 @@
 
-import ConsultationSection from "../components/services/Consultation";
-import HeroSection from "../components/services/Hero";
-import WhatWeOffer from "../components/services/WhatWeOffer";
-
-
-export function ServicePage() {
-  return (
-    <>
-      <HeroSection />
-      <WhatWeOffer/>
-      <ConsultationSection/>
-    </>
-  );
-}
+import { ConsultationCTA } from "@/components/Consultation";
+import HeroSection from "@/components/services/Hero";
+import WhatWeOffer from "@/components/services/WhatWeOffer";
 
 export default function Services() {
   return (
     <>
-   <ServicePage/>
+    <HeroSection />
+      <WhatWeOffer/>
+      <ConsultationCTA/>
     </>
   );
 }
