@@ -15,8 +15,8 @@ export default function Explore({ links }: ExploreProps) {
   const defaultLinks = [
     { label: "Our Products", href: "/products" },
     { label: "Services", href: "/services" },
-    { label: "Manhattan", href: "/location/manhattan" },
-    { label: "Bergen County", href: "/location/bergen" }
+    { label: "Manhattan", href: "/locations/manhattan" },
+    { label: "Bergen County", href: "/locations/bergen" }
   ];
 
   const activeLinks = links || defaultLinks;
