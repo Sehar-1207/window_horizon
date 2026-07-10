@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { locationData } from '@/components/data/locations';
+import { locationData } from '@/data/locations';
 import * as LucideIcons from 'lucide-react';
 import CallToActionBanner from '@/components/CallToAction';
 import Explore from "@/components/Explore"

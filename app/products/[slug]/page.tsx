@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Check } from 'lucide-react';
-import { PRODUCTS_DATA } from '@/components/data/products';
+import { PRODUCTS_DATA } from '@/data/products';
 import CallToActionBanner from '@/components/CallToAction';
 import Explore from "@/components/Explore";
 
@@ -69,8 +69,6 @@ export default async function DynamicProductPage({ params }: PageProps) {
           </div>
         </div>
       </div>
-
-      {/* Intro Section */}
       <div className="bg-white py-16 md:py-24 border-b border-neutral-100">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-xl sm:text-2xl md:text-3xl text-neutral-600 font-serif font-light italic leading-relaxed">

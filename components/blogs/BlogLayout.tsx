@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, Clock } from 'lucide-react';
-import { BLOGS_DATA } from '../data/blogs';
+import { BLOGS_DATA } from '../../data/blogs';
 
 export default function BlogLayout() {
   const featuredBlog = BLOGS_DATA.find((blog) => blog.slug === 'nyc-apartments') || BLOGS_DATA[0];

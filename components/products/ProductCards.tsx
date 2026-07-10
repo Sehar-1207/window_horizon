@@ -7,7 +7,6 @@ import rollerImg from "@/components/assets/service4.jpg";
 export default function ProductShowcase() {
   return (
     <div className="flex flex-col">
-      {/* CARD 1: SOLAR SHADES */}
       <ProductFeatureBlock
         badge="Solar Shades"
         title="Modern Light Control & View Preservation"
@@ -31,7 +30,6 @@ export default function ProductShowcase() {
         ]}
       />
 
-      {/* CARD 2: HONEYCOMB SHADES */}
       <ProductFeatureBlock
         badge="Honeycomb Shades"
         title="Superior Insulation & Energy Efficiency"
@@ -53,7 +51,6 @@ export default function ProductShowcase() {
         ]}
       />
 
-      {/* CARD 3: SILHOUETTE SHADES */}
       <ProductFeatureBlock
         badge="Silhouette Shades"
         title="Soft Fabric Sheers & Diffused Glow"
@@ -75,7 +72,6 @@ export default function ProductShowcase() {
         ]}
       />
 
-      {/* CARD 4: ROLLER SHADES */}
       <ProductFeatureBlock
         badge="Roller Shades"
         title="Clean Engineering & Minimalist Design"

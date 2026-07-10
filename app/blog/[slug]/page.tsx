@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, Clock, Phone } from 'lucide-react';
-import { BLOGS_DATA } from '@/components/data/blogs';
+import { BLOGS_DATA } from '@/data/blogs';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -71,28 +71,22 @@ export default async function DynamicArticlePage({ params }: PageProps) {
         </div>
       </div>
 
-      {/* Main Two-Column Stream Layout */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           
-          {/* Scrollable Center Main Content (Ref: image_80f9a2.jpg / image_80fce6.jpg) */}
           <div className="lg:col-span-2 space-y-8 text-left">
             
-            {/* Excerpt Summary Block Container */}
             <div className="border-l-4 border-[#c5a059] bg-[#fcfbf9] p-6 md:p-8 rounded-r-xl shadow-sm">
               <p className="text-base md:text-lg text-neutral-600 font-serif font-light italic leading-relaxed">
                 {blog.excerpt}
               </p>
             </div>
 
-            {/* Render Body Narrative Sections */}
             <div className="prose prose-neutral max-w-none text-neutral-700 font-light text-base md:text-lg leading-relaxed space-y-6">
               {blog.content.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
-
-            {/* List Styled Layout Block Stream Demonstration */}
             <div className="pt-8 space-y-6">
               <h2 className="text-2xl md:text-3xl font-serif font-normal text-neutral-900 uppercase tracking-wide border-b pb-4">
                 Top Shading Alternatives Desired
@@ -117,7 +111,6 @@ export default async function DynamicArticlePage({ params }: PageProps) {
               </div>
             </div>
 
-            {/* Footer Categories & Meta Share Block (Ref: image_80fa21.jpg) */}
             <div className="pt-12 border-t border-neutral-100 flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <span className="text-xs uppercase font-serif tracking-widest text-neutral-400">Category:</span>
@@ -133,8 +126,7 @@ export default async function DynamicArticlePage({ params }: PageProps) {
                 <button className="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center text-xs hover:opacity-90 transition-opacity">p</button>
               </div>
             </div>
-
-            {/* Related Recommendations Carousel Container Block */}
+            
             <div className="pt-12">
               <h3 className="text-xl font-serif font-normal text-neutral-900 tracking-wide uppercase mb-6 border-b pb-3">
                 You May Also Like
@@ -156,10 +148,8 @@ export default async function DynamicArticlePage({ params }: PageProps) {
 
           </div>
 
-          {/* Sticky Static Sidebar (Ref: image_80f9a2.jpg / image_80fa21.jpg) */}
           <div className="lg:sticky lg:top-8 space-y-8 text-left self-start">
             
-            {/* Free Consultation Form Block */}
             <div className="bg-[#5B5B5B] text-white p-8 rounded-xl shadow-lg border border-black/20 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-white/[0.02] rounded-full translate-x-8 -translate-y-8" />
               
@@ -187,7 +177,6 @@ export default async function DynamicArticlePage({ params }: PageProps) {
               </a>
             </div>
 
-            {/* Recent Posts Static Feed List Component */}
             <div className="bg-white border border-neutral-100 rounded-xl p-6 shadow-sm">
               <h3 className="text-sm font-serif font-bold tracking-widest text-neutral-800 uppercase border-b pb-3 mb-4">
                 Recent Posts
@@ -230,7 +219,6 @@ export default async function DynamicArticlePage({ params }: PageProps) {
               </div>
             </div>
 
-            {/* Static Product Summary Block Area */}
             <div className="bg-[#fcfbf9] border border-neutral-100 rounded-xl p-6 shadow-sm">
               <h3 className="text-sm font-serif font-bold tracking-widest text-neutral-800 uppercase border-b pb-3 mb-3">
                 Our Products
