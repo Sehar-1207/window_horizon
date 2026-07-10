@@ -79,7 +79,8 @@ export default function WhyChooseSection() {
                 backgroundColor: "rgba(255, 255, 255, 0.06)",
                 borderColor: "rgba(230, 208, 183, 0.15)"
               }}
-              className="w-full bg-white/[0.03] border border-white/[0.06] rounded-xl p-3.5 sm:p-5 flex items-center gap-3 sm:gap-4 transition-colors duration-200"
+              style={{ backfaceVisibility: "hidden", transform: "translateZ(0)" }}
+              className="w-full bg-white/[0.03] border border-white/[0.06] rounded-xl p-3.5 sm:p-5 flex items-center gap-3 sm:gap-4 transition-colors duration-200 isolate"
             >
               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#E6D0B7] text-[#332A19] flex items-center justify-center flex-shrink-0 shadow-sm">
                 <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#332A19]" strokeWidth={3} />
