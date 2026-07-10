@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Check } from 'lucide-react';
 import { PRODUCTS_DATA } from '@/components/data/products';
+import CallToActionBanner from '@/components/CallToAction';
+import Explore from "@/components/Explore";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -16,6 +18,14 @@ export async function generateStaticParams() {
 }
 
 export default async function DynamicProductPage({ params }: PageProps) {
+
+  const linksData = [
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Services", href: "/services" },
+    { label: "Blogs", href: "/blog" },
+    { label: "Bergen County", href: "/LOCATION/bergen" }
+  ];
+
   const { slug } = await params;
   const product = PRODUCTS_DATA.find((item) => item.slug === slug);
 
@@ -25,8 +35,7 @@ export default async function DynamicProductPage({ params }: PageProps) {
 
   return (
     <div className="w-full bg-[#fcfbf9] text-neutral-800 selection:bg-[#c5a059]/20 font-sans">
-      
-      {/* 1. Hero Block Viewport Layer (Ref: image_810cff.jpg) */}
+
       <div className="relative w-full h-[85vh] min-h-[550px] flex items-center justify-center text-center px-6">
         <Image
           src={product.heroImage}
@@ -54,17 +63,14 @@ export default async function DynamicProductPage({ params }: PageProps) {
             >
               Book Free Consultation
             </Link>
-            <a 
-              href="tel:877-779-6060"
-              className="border-2 border-white hover:bg-white/10 text-white font-serif font-bold text-xs tracking-[0.18em] uppercase px-8 py-4 transition-colors"
-            >
+            <p className="border-2 border-white hover:bg-white/10 text-white font-serif font-bold text-xs tracking-[0.18em] uppercase px-8 py-4 transition-colors">
               Call 877-779-6060
-            </a>
+            </p>
           </div>
         </div>
       </div>
 
-      {/* 2. Italicized Lead Introduction Block (Ref: image_810fae.png) */}
+      {/* Intro Section */}
       <div className="bg-white py-16 md:py-24 border-b border-neutral-100">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-xl sm:text-2xl md:text-3xl text-neutral-600 font-serif font-light italic leading-relaxed">
@@ -72,12 +78,8 @@ export default async function DynamicProductPage({ params }: PageProps) {
           </p>
         </div>
       </div>
-
-      {/* 3. Balanced Dual Parameter Analysis (Ref: image_810fae.png / image_811024.png) */}
       <div className="bg-white pb-20 md:pb-32">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-          
-          {/* Key Benefits Column Stream */}
           <div className="lg:col-span-2 text-left space-y-6">
             <h2 className="text-2xl md:text-3xl font-serif tracking-widest uppercase font-normal text-neutral-900 border-b pb-4">
               Key Benefits
@@ -93,8 +95,7 @@ export default async function DynamicProductPage({ params }: PageProps) {
               ))}
             </ul>
           </div>
-
-          {/* Best For Static Nested Sidebar */}
+          
           <div className="lg:col-span-3 bg-[#fcfbf9] border border-neutral-200/50 p-8 md:p-12 rounded-sm text-left">
             <h3 className="text-xl font-serif text-center tracking-widest uppercase mb-8 text-neutral-900">
               Best For:
@@ -112,11 +113,8 @@ export default async function DynamicProductPage({ params }: PageProps) {
               ))}
             </div>
           </div>
-
         </div>
       </div>
-
-      {/* 4. Opacity Comparison Matrix (Ref: image_811049.png) */}
       {product.hasComparison && (
         <div className="bg-[#ede8e2] py-20 md:py-28 border-t border-b border-neutral-200/40">
           <div className="max-w-5xl mx-auto px-6 text-center space-y-4">
@@ -129,7 +127,6 @@ export default async function DynamicProductPage({ params }: PageProps) {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10 text-left">
-              {/* Left Configuration Panel */}
               <div className="bg-white rounded-t-sm rounded-b-md shadow-sm border-t-4 border-[#dcae6c] p-8 space-y-6">
                 <h3 className="text-xl font-serif tracking-widest text-neutral-900 font-medium">
                   {product.leftCompare?.title}
@@ -144,7 +141,6 @@ export default async function DynamicProductPage({ params }: PageProps) {
                 </ul>
               </div>
 
-              {/* Right Configuration Panel */}
               <div className="bg-white rounded-t-sm rounded-b-md shadow-sm border-t-4 border-neutral-800 p-8 space-y-6">
                 <h3 className="text-xl font-serif tracking-widest text-neutral-900 font-medium">
                   {product.rightCompare?.title}
@@ -163,7 +159,6 @@ export default async function DynamicProductPage({ params }: PageProps) {
         </div>
       )}
 
-      {/* 5. Motorization Focus Ribbon (Ref: image_811069.jpg) */}
       <div className="bg-[#c5a059] text-white py-20 md:py-28 text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-6">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light tracking-wide uppercase">
@@ -195,7 +190,6 @@ export default async function DynamicProductPage({ params }: PageProps) {
         </div>
       </div>
 
-      {/* 6. Product Installation Showcase Gallery (Ref: image_8110a2.jpg) */}
       <div className="bg-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 text-center space-y-12">
           <h2 className="text-2xl sm:text-3xl font-serif tracking-widest uppercase text-neutral-900">
@@ -220,8 +214,6 @@ export default async function DynamicProductPage({ params }: PageProps) {
           </div>
         </div>
       </div>
-
-      {/* 7. Action Video Integration Framework (Ref: image_8110c7.jpg) */}
       <div className="bg-[#fcfbf9] py-16 md:py-24 border-t border-neutral-200/30">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-8">
           <h2 className="text-2xl sm:text-3xl font-serif tracking-widest uppercase text-neutral-900">
@@ -239,7 +231,9 @@ export default async function DynamicProductPage({ params }: PageProps) {
           </div>
         </div>
       </div>
-
+      <CallToActionBanner />
+      
+      <Explore links={linksData} />
     </div>
   );
 }

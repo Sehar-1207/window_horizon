@@ -22,7 +22,7 @@ export default function WhyChooseSection() {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.06,
+        staggerChildren: 0.05,
       },
     },
   };
@@ -40,7 +40,7 @@ export default function WhyChooseSection() {
   };
 
   return (
-    <section className="w-full bg-[#c5a059] text-white py-16 sm:py-20 md:py-24 overflow-hidden">
+    <section className="w-full bg-[#c5a059] text-white py-12 sm:py-20 md:py-24 overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         
         <motion.div
@@ -50,13 +50,13 @@ export default function WhyChooseSection() {
           transition={{ duration: 0.5 }}
           className="text-center flex flex-col items-center w-full"
         >
-          <h2 className="text-white text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-serif font-light tracking-[0.08em] xs:tracking-[0.12em] sm:tracking-[0.18em] uppercase leading-tight max-w-2xl">
+          <h2 className="text-white text-xl sm:text-3xl md:text-4xl lg:text-[40px] font-serif font-light tracking-[0.04em] sm:tracking-[0.18em] uppercase squash-tracking-mobile leading-tight max-w-2xl">
             Why Choose Window Horizons
           </h2>
           
-          <div className="w-12 sm:w-16 h-[2px] bg-[#E6D0B7] mt-3 sm:mt-4 mb-5 sm:mb-6 md:mb-8" />
+          <div className="w-12 sm:w-16 h-[2px] bg-[#E6D0B7] mt-3 sm:mt-4 mb-4 sm:mb-6 md:mb-8" />
 
-          <p className="text-white/85 font-serif font-light text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed tracking-wide">
+          <p className="text-white/85 font-serif font-light text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed tracking-wide px-2 sm:px-0">
             For over 30 years, we&apos;ve been the trusted choice for custom window treatments across 
             NYC and New Jersey. As a certified Hunter Douglas dealer, we combine premium products 
             with expert installation and personalized service.
@@ -68,7 +68,7 @@ export default function WhyChooseSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mt-10 sm:mt-12 md:mt-16"
+          className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mt-8 sm:mt-12 md:mt-16"
         >
           {FEATURES_DATA.map((item) => (
             <motion.div
@@ -79,13 +79,13 @@ export default function WhyChooseSection() {
                 backgroundColor: "rgba(255, 255, 255, 0.06)",
                 borderColor: "rgba(230, 208, 183, 0.15)"
               }}
-              className="w-full bg-white/[0.03] border border-white/[0.06] rounded-xl p-4 sm:p-5 flex items-start gap-3.5 sm:gap-4 transition-colors duration-200"
+              className="w-full bg-white/[0.03] border border-white/[0.06] rounded-xl p-3.5 sm:p-5 flex items-center gap-3 sm:gap-4 transition-colors duration-200"
             >
-              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#E6D0B7] text-[#332A19] flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#E6D0B7] text-[#332A19] flex items-center justify-center flex-shrink-0 shadow-sm">
                 <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#332A19]" strokeWidth={3} />
               </div>
 
-              <span className="text-white/95 font-serif text-sm sm:text-base font-light tracking-wide leading-snug pt-0.5">
+              <span className="text-white/95 font-serif text-sm sm:text-base font-light tracking-wide leading-snug">
                 {item.text}
               </span>
             </motion.div>
