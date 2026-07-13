@@ -1,6 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { Phone } from "lucide-react";
+
+const phoneNo = "877-779-6060";
 
 export function ConsultationCTA() {
   return (
@@ -16,20 +19,22 @@ export function ConsultationCTA() {
         </p>
 
         <div className="mt-10 w-full flex flex-col items-center gap-6 px-4">
-          <button className="w-auto  max-w-full bg-[#c5a059] hover:bg-[#E8B65A] text-white font-sans text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase px-6 sm:px-10 py-4 shadow-[0_4px_14px_rgba(164,122,76,0.25)] active:scale-[0.99] transition-all rounded-none overflow-hidden text-ellipsis whitespace-nowrap"
-          onClick={() => window.location.href = '/contact'}
+          <Link 
+            href="/contact"
+            className="w-auto max-w-full bg-[#c5a059] hover:bg-[#E8B65A] text-white font-sans text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase px-6 sm:px-10 py-4 shadow-[0_4px_14px_rgba(164,122,76,0.25)] active:scale-[0.99] transition-all rounded-none overflow-hidden text-ellipsis whitespace-nowrap inline-flex items-center justify-center"
           >
             Schedule Consultation Today
-          </button>
+          </Link>
 
-          <p
+          <a
+            href={`tel:${phoneNo}`}
             className="group flex items-center gap-3 text-[#3c332a] hover:text-[#a47a4c] font-serif text-lg sm:text-xl md:text-2xl font-normal tracking-wide transition-colors duration-200 mt-2"
           >
             <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white border border-[#ebd9c7]/50 flex items-center justify-center text-[#a47a4c] shadow-sm group-hover:border-[#a47a4c]/50 transition-colors">
               <Phone className="w-4 h-4 fill-current" />
             </span>
-            <span className="tabular-nums">877-779-6060</span>
-          </p>
+            <span className="tabular-nums">{phoneNo}</span>
+          </a>
         </div>
 
       </div>

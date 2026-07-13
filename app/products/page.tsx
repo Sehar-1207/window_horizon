@@ -4,13 +4,18 @@ import mainHeroBg from "@/components/assets/shade1.jpg";
 import CallToActionBanner from "@/components/CallToAction";
 import Explore from "@/components/Explore";
 
+interface links{
+  label:string,
+  href:string
+}
+
+const customLinks :links[]= [
+{ label: "Services", href: "/services" },
+{ label: "Blog", href: "/blog" },
+{ label: "Schedule Consultation", href: "/contact" },
+{ label: "Home", href: "/" },
+];
 export default function products() {
-     const customLinks = [
-    { label: "Services", href: "/services" },
-    { label: "Blog", href: "/blog" },
-    { label: "Schedule Consultation", href: "/contact" },
-    { label: "Home", href: "/" },
-  ];
 
   return (
     <>

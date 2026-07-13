@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
-import bg from "../assets/customblind3.jpg";
-import bg1 from "../assets/shade2.jpg";
+import bg from "@/components/assets/customblind3.jpg";
+import bg1 from "@/components/assets/shade1.jpg";
 
 export interface HeroSection {
   tagline: string;

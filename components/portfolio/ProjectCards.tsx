@@ -1,7 +1,7 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { MapPin } from 'lucide-react';
-import photo from "../assets/customblind2.jpg"
+import photo from "../assets/customblind2.jpg";
 
 interface ProjectCardProps {
   imageSrc: string | StaticImageData;
@@ -18,7 +18,7 @@ const ProjectCard = ({ imageSrc, location, title, description, tags }: ProjectCa
         src={imageSrc}
         alt={title}
         fill
-        className="object-cover transition-transform duration-500 ease-out group-hover:scale-x-110"
+        className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
       <div className="absolute top-4 right-4 z-10">
         <span className="inline-block bg-[#c5a059]/90 text-white text-xs font-medium px-3 py-1 rounded-md tracking-wider uppercase backdrop-blur-sm">
@@ -55,33 +55,33 @@ const ProjectCard = ({ imageSrc, location, title, description, tags }: ProjectCa
   </div>
 );
 
-export default function FeaturedProjects() {
-  const projectsData = [
-    {
-      imageSrc: photo,
-      location: "Manhattan, NYC",
-      title: "Custom Blackout Window Shades",
-      description: "Blackout window shades installed in a Manhattan home for total light control and privacy.",
-      tags: ["Blackout Shades", "Custom Shades"]
-    },
-    {
-      imageSrc: photo,
-      location: "Gramercy Park, NYC",
-      title: "Custom Blackout Roller Shades",
-      description: "Blackout roller shades installed in a Gramercy Park apartment for better sleep and a sleek design.",
-      tags: ["Blackout Shades", "Roller Shades"]
-    },
-    {
-      imageSrc: photo,
-      location: "Upper West Side, NYC",
-      title: "Custom Window Treatments",
-      description: "Custom window treatments installed in an Upper West Side residence for enhanced privacy and elegance.",
-      tags: ["Custom Shades", "Blinds"]
-    }
-  ];
+const projectsData: ProjectCardProps[] = [
+  {
+    imageSrc: photo,
+    location: "Manhattan, NYC",
+    title: "Custom Blackout Window Shades",
+    description: "Blackout window shades installed in a Manhattan home for total light control and privacy.",
+    tags: ["Blackout Shades", "Custom Shades"]
+  },
+  {
+    imageSrc: photo,
+    location: "Gramercy Park, NYC",
+    title: "Custom Blackout Roller Shades",
+    description: "Blackout roller shades installed in a Gramercy Park apartment for better sleep and a sleek design.",
+    tags: ["Blackout Shades", "Roller Shades"]
+  },
+  {
+    imageSrc: photo,
+    location: "Upper West Side, NYC",
+    title: "Custom Window Treatments",
+    description: "Custom window treatments installed in an Upper West Side residence for enhanced privacy and elegance.",
+    tags: ["Custom Shades", "Blinds"]
+  }
+];
 
+export default function FeaturedProjects() {
   return (
-    <section className="w-full bg-[#FFFBF1] py-8 md:py-12  overflow-hidden">
+    <section className="w-full bg-[#FFFBF1] py-8 md:py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">

@@ -20,56 +20,70 @@ import {
 } from "react-icons/fa";
 import thumbnail from "../components/assets/service1.jpg";
 
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
+interface SocialPlatform {
+  name: string;
+  meta: string;
+  icon: React.ReactNode;
+}
+
+const sitemapLinks: FooterLink[] = [
+  { label: "Home", href: "#" },
+  { label: "About Us", href: "#" },
+  { label: "Window Treatments Manhattan", href: "#" },
+  { label: "Window Treatments Bergen County", href: "#" },
+  { label: "Portfolio", href: "#" },
+  { label: "Service Areas", href: "#" },
+  { label: "Contact", href: "#" },
+];
+
+const productLinks: FooterLink[] = [
+  { label: "Roller Shades", href: "#" },
+  { label: "Motorized Shades", href: "#" },
+  { label: "Solar Shades", href: "#" },
+  { label: "Honeycomb Shades", href: "#" },
+  { label: "Silhouette Shades", href: "#" },
+  { label: "Wood Blinds", href: "#" },
+  { label: "Roman Shades", href: "#" },
+  { label: "Vertical Blinds", href: "#" },
+];
+
+const Gradient_Class = "gradient-gold-stone";
+const phoneNo = "877-779-6060";
+
+const socialPlatforms: SocialPlatform[] = [
+  {
+    name: "YELP",
+    meta: "4.9 RATING",
+    icon: <FaYelp className="w-5 h-5 text-[#d32323]" />,
+  },
+  {
+    name: "GOOGLE",
+    meta: "5.0 RATING",
+    icon: <FaGoogle className="w-5 h-5 text-[#4285F4]" />,
+  },
+  {
+    name: "HOUZZ",
+    meta: "5.0 RATING",
+    icon: <Award className="w-5 h-5 text-[#7ac142]" />,
+  },
+  {
+    name: "FACEBOOK",
+    meta: "FOLLOW US",
+    icon: <FaFacebookF className="w-5 h-5 text-[#1877F2]" />,
+  },
+  {
+    name: "INSTAGRAM",
+    meta: "FOLLOW US",
+    icon: <FaInstagram className="w-5 h-5 text-[#E1306C]" />,
+  },
+];
+
 export default function CombinedFooter() {
-  const sitemapLinks = [
-    { label: "Home", href: "#" },
-    { label: "About Us", href: "#" },
-    { label: "Window Treatments Manhattan", href: "#" },
-    { label: "Window Treatments Bergen County", href: "#" },
-    { label: "Portfolio", href: "#" },
-    { label: "Service Areas", href: "#" },
-    { label: "Contact", href: "#" },
-  ];
-
-  const productLinks = [
-    { label: "Roller Shades", href: "#" },
-    { label: "Motorized Shades", href: "#" },
-    { label: "Solar Shades", href: "#" },
-    { label: "Honeycomb Shades", href: "#" },
-    { label: "Silhouette Shades", href: "#" },
-    { label: "Wood Blinds", href: "#" },
-    { label: "Roman Shades", href: "#" },
-    { label: "Vertical Blinds", href: "#" },
-  ];
-  const Gradient_Class = "gradient-gold-stone";
-  const socialPlatforms = [
-    {
-      name: "YELP",
-      meta: "4.9 RATING",
-      icon: <FaYelp className="w-5 h-5 text-[#d32323]" />,
-    },
-    {
-      name: "GOOGLE",
-      meta: "5.0 RATING",
-      icon: <FaGoogle className="w-5 h-5 text-[#4285F4]" />,
-    },
-    {
-      name: "HOUZZ",
-      meta: "5.0 RATING",
-      icon: <Award className="w-5 h-5 text-[#7ac142]" />,
-    },
-    {
-      name: "FACEBOOK",
-      meta: "FOLLOW US",
-      icon: <FaFacebookF className="w-5 h-5 text-[#1877F2]" />,
-    },
-    {
-      name: "INSTAGRAM",
-      meta: "FOLLOW US",
-      icon: <FaInstagram className="w-5 h-5 text-[#E1306C]" />,
-    },
-  ];
-
   return (
     <footer
       className={`w-full ${Gradient_Class} text-white border-t border-[#c5a059]`}
@@ -141,12 +155,15 @@ export default function CombinedFooter() {
               </div>
 
               <div className="pt-1 space-y-3.5">
-                <p className="flex items-center gap-3 text-white hover:text-white/80 font-sans text-[14px] transition-colors group font-medium">
+                <a
+                  href={`tel:${phoneNo}`}
+                  className="flex items-center gap-3 text-white hover:text-white/80 font-sans text-[14px] transition-colors group font-medium"
+                >
                   <Phone className="w-4 h-4 text-white fill-current flex-shrink-0" />
                   <span className="tabular-nums group-hover:underline">
-                    877-779-6060
+                   {phoneNo}
                   </span>
-                </p>
+                </a>
 
                 <a
                   href="mailto:info@windowhorizons.com"

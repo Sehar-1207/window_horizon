@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
-
+const phoneNo = "877-779-6060";
 export default function ContactSection() {
   return (
     <div className="w-full bg-[#fcfbf9] min-h-screen py-16 md:py-24 font-serif">
@@ -23,8 +23,8 @@ export default function ContactSection() {
                 </div>
                 <div className="font-sans">
                   <h4 className="font-serif font-bold text-neutral-800 text-base tracking-wide">Direct Line</h4>
-                  <a href="tel:877-779-6060" className="mt-1 block text-neutral-600 font-light text-base hover:text-[#c5a059] transition-colors duration-200">
-                    877-779-6060
+                  <a href={`tel:${phoneNo}`} className="mt-1 block text-neutral-600 font-light text-base hover:text-[#c5a059] transition-colors duration-200">
+                    {phoneNo}
                   </a>
                 </div>
               </div>

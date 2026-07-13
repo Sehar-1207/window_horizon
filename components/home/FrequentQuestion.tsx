@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link"; 
+
 
 interface FAQItem {
   question: string;
@@ -42,6 +44,7 @@ const FAQ_DATA: FAQItem[] = [
     answer: "Absolutely. Our design experts work closely with you during the free consultation to choose textures, colors, and operational systems that perfectly complement your interior décor, whether modern, traditional, or transitional.",
   },
 ];
+const phoneNo = "877-779-6060";
 
 export default function FrequentQuestions() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -111,11 +114,12 @@ export default function FrequentQuestions() {
           <p className="text-[#5a4f43] font-serif text-sm sm:text-base tracking-wide mb-4">
             Have more questions? We&apos;re here to help!
           </p>
-          <button 
+          <Link 
+          href={`tel:${phoneNo}`}
             className="inline-block max-w-full text-center bg-[#c5a059] hover:bg-[#b08c49] text-white font-sans text-xs sm:text-sm font-semibold tracking-[0.15em] uppercase px-6 sm:px-8 py-3.5 shadow-md active:scale-[0.99] transition-all rounded-none overflow-hidden text-ellipsis whitespace-nowrap"
           >
-            CALL 877-779-6060
-          </button>
+            CALL {phoneNo}
+          </Link>
         </div>
 
       </div>

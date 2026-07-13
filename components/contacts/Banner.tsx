@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+const phoneNo = "877-779-6060";
 export default function ConsultationBanner() {
   return (
     <section className="w-full bg-[#c5a059] text-white py-16 px-6 text-center shadow-inner">
@@ -19,7 +19,7 @@ export default function ConsultationBanner() {
         <p 
           className="mt-2 block font-serif text-4xl sm:text-5xl md:text-6xl text-white tracking-wide"
         >
-          877-779-6060
+          {phoneNo}
         </p>
         <p
           className="mt-4 block font-serif text-xl sm:text-2xl md:text-3xl text-white tracking-[0.15em] uppercase pb-1"

@@ -26,33 +26,33 @@ const StatItem = ({ icon, number, title, subtitle }: StatItemProps) => (
   </div>
 );
 
+const statsData = [
+  {
+    icon: <Home className="w-6 h-6 stroke-[1.5]" />,
+    number: "500+",
+    title: "Residential",
+    subtitle: "Homes transformed"
+  },
+  {
+    icon: <Building2 className="w-6 h-6 stroke-[1.5]" />,
+    number: "300+",
+    title: "Manhattan",
+    subtitle: "NYC installations"
+  },
+  {
+    icon: <MapPin className="w-6 h-6 stroke-[1.5]" />,
+    number: "200+",
+    title: "Bergen County",
+    subtitle: "NJ projects"
+  },
+  {
+    icon: <Sparkles className="w-6 h-6 stroke-[1.5]" />,
+    number: "150+",
+    title: "Motorized",
+    subtitle: "Smart solutions"
+  }
+];
 export default function StatsSection() {
-  const statsData = [
-    {
-      icon: <Home className="w-6 h-6 stroke-[1.5]" />,
-      number: "500+",
-      title: "Residential",
-      subtitle: "Homes transformed"
-    },
-    {
-      icon: <Building2 className="w-6 h-6 stroke-[1.5]" />,
-      number: "300+",
-      title: "Manhattan",
-      subtitle: "NYC installations"
-    },
-    {
-      icon: <MapPin className="w-6 h-6 stroke-[1.5]" />,
-      number: "200+",
-      title: "Bergen County",
-      subtitle: "NJ projects"
-    },
-    {
-      icon: <Sparkles className="w-6 h-6 stroke-[1.5]" />,
-      number: "150+",
-      title: "Motorized",
-      subtitle: "Smart solutions"
-    }
-  ];
 
   return (
     <section className="w-full bg-[#fcfbf9] py-16 md:py-24 border-b border-neutral-100">

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
+const phoneNo = "877-779-6060";
 export default function CallToActionBanner() {
   return (
     <section className="w-full bg-[#c5a059] py-16 md:py-20 text-center px-6 relative overflow-hidden">
@@ -26,7 +27,7 @@ export default function CallToActionBanner() {
           <p 
             className="inline-flex items-center justify-center border border-white text-white font-medium px-8 py-3.5 bg-black/5 hover:bg-white/10 transition-colors duration-200 text-sm md:text-base tracking-wide rounded-sm"
           >
-            Call 877-779-6060
+            Call {phoneNo}
           </p>
         </div>
 

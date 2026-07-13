@@ -11,14 +11,14 @@ interface ExploreProps {
   links?: ExploreLink[]; 
 }
 
-export default function Explore({ links }: ExploreProps) {
-  const defaultLinks = [
-    { label: "Our Products", href: "/products" },
-    { label: "Services", href: "/services" },
-    { label: "Manhattan", href: "/locations/manhattan" },
-    { label: "Bergen County", href: "/locations/bergen" }
-  ];
+const defaultLinks = [
+  { label: "Our Products", href: "/products" },
+  { label: "Services", href: "/services" },
+  { label: "Manhattan", href: "/locations/manhattan" },
+  { label: "Bergen County", href: "/locations/bergen" }
+];
 
+export default function Explore({ links }: ExploreProps) {
   const activeLinks = links || defaultLinks;
 
   return (

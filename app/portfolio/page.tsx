@@ -6,7 +6,11 @@ import Explore from "@/components/Explore";
 import Hero from "@/components/Hero";
 import portfolioImg from "@/components/assets/shade2.jpg";
 export default function Portfolio() {
-  const customLinks = [
+  interface links{
+  label:string,
+  href:string
+}
+  const customLinks :links[]= [
     { label: "Products", href: "/PRODUCS/all-products" },
     { label: "Blog", href: "/blog" },
     { label: "Schedule Consultation", href: "/contact" },

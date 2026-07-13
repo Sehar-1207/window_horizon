@@ -7,9 +7,20 @@ import { Menu, X, Search, ChevronDown, Phone, Mail, ChevronRight } from "lucide-
 import Image from "next/image";
 import logo from "./assets/logo.png";
 
+interface DropdownItem {
+  label: string;
+  href: string;
+}
+
+interface NavigationItem {
+  label: string;
+  href: string;
+  dropdownItems?: DropdownItem[];
+}
+
 const GRADIENT_CLASS = "gradient-gold-stone";
 
-const navigationData = [
+const navigationData: NavigationItem[] = [
   { label: "HOME", href: "/" },
   { 
     label: "LOCATIONS", 
@@ -35,7 +46,7 @@ const navigationData = [
   { label: "BLOG", href: "/blog" },
   { label: "CONTACT", href: "/contact" },
 ];
-
+const phoneNo = "877-779-6060";
 export default function Navbar() {
   const pathname = usePathname();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -45,7 +56,7 @@ export default function Navbar() {
     setIsDrawerOpen(false);
   };
 
-  const isLinkActive = (href: string, dropdownItems?: { href: string }[]) => {
+  const isLinkActive = (href: string, dropdownItems?: DropdownItem[]) => {
     if (href !== "#" && pathname === href) return true;
     if (dropdownItems) {
       return dropdownItems.some(subItem => pathname === subItem.href);
@@ -106,7 +117,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-2">
             <Search size={18} className="text-gray-400 cursor-pointer mr-2" />
             <a href="tel:877-779-6060" className={`flex items-center gap-2 px-4 py-2.5 text-[10px] text-white font-bold rounded shadow-sm hover:opacity-90 ${GRADIENT_CLASS}`}>
-              <Phone size={14} /> 877-779-6060
+              <Phone size={14} /> {phoneNo}
             </a>
             <a href="mailto:info@windowhorizons.com" className={`flex items-center gap-2 px-4 py-2.5 text-[10px] text-white font-bold rounded shadow-sm hover:opacity-90 ${GRADIENT_CLASS}`}>
               <Mail size={14} /> Email
@@ -118,10 +129,8 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Drawer Overlay */}
       <div className={`fixed inset-0 z-50 bg-black/50 transition-opacity ${isDrawerOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`} onClick={() => setIsDrawerOpen(false)} />
       
-      {/* Mobile Drawer Side Panel */}
       <aside className={`fixed top-0 right-0 h-full w-[300px] bg-white z-50 transform transition-transform flex flex-col ${isDrawerOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="p-6 border-b flex justify-between items-center shrink-0">
           <span className="font-bold tracking-widest text-sm text-gray-800">MENU</span>
@@ -177,7 +186,7 @@ export default function Navbar() {
 
         <div className="p-6 border-t border-gray-100 flex flex-col gap-3 shrink-0">
           <a href="tel:877-779-6060" className={`flex items-center justify-center gap-2 p-3 text-[12px] text-white font-bold rounded shadow-sm ${GRADIENT_CLASS}`}>
-            <Phone size={14} /> 877-779-6060
+            <Phone size={14} /> {phoneNo}
           </a>
           <a href="mailto:info@windowhorizons.com" className={`flex items-center justify-center gap-2 p-3 text-[12px] text-white font-bold rounded shadow-sm ${GRADIENT_CLASS}`}>
             <Mail size={14} /> EMAIL US

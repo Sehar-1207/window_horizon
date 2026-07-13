@@ -15,14 +15,17 @@ const DynamicIcon = ({ name, className }: { name: string; className?: string }) 
   if (!IconComponent) return <LucideIcons.HelpCircle className={className} />;
   return <IconComponent className={className} />;
 };
-
+interface links{
+  label:string,
+  href:string
+}
+const linksData: links[] = [
+  { label: "Our Products", href: "/PRODUCTS" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Blogs", href: "/blog" }
+];
 export default async function LocationPage({ params }: PageProps) {
-  const linksData = [
-    { label: "Our Products", href: "/PRODUCTS" },
-    { label: "Services", href: "/services" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Blogs", href: "/blog" }
-  ];
   const { slug } = await params;
   const data = locationData[slug.toLowerCase()];
 

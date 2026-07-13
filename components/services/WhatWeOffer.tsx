@@ -1,30 +1,36 @@
 import React from 'react';
 import { Sparkles, Ruler, Wrench, Zap } from 'lucide-react';
 
-export default function WhatWeOffer() {
-  const services = [
-    {
-      icon: <Sparkles className="text-[#c5a059] w-5 h-5 md:w-6 md:h-6 stroke-[1.5]" />,
-      title: "FREE IN-HOME CONSULTATION",
-      desc: "We bring samples to your home and help you choose the best solution."
-    },
-    {
-      icon: <Ruler className="text-[#c5a059] w-5 h-5 md:w-6 md:h-6 stroke-[1.5]" />,
-      title: "PROFESSIONAL MEASURING",
-      desc: "Accurate measurements for a perfect fit, including large and custom windows."
-    },
-    {
-      icon: <Wrench className="text-[#c5a059] w-5 h-5 md:w-6 md:h-6 stroke-[1.5]" />,
-      title: "EXPERT INSTALLATION",
-      desc: "Our certified team ensures your window treatments are installed flawlessly.",
-    },
-    {
-      icon: <Zap className="text-[#c5a059] w-5 h-5 md:w-6 md:h-6 stroke-[1.5]" />,
-      title: "MOTORIZATION & AUTOMATION",
-      desc: "Control your shades effortlessly with smart home integration and remotes."
-    }
-  ];
+interface Service {
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+}
 
+const services: Service[] = [
+  {
+    icon: <Sparkles className="text-[#c5a059] w-5 h-5 md:w-6 md:h-6 stroke-[1.5]" />,
+    title: "FREE IN-HOME CONSULTATION",
+    desc: "We bring samples to your home and help you choose the best solution."
+  },
+  {
+    icon: <Ruler className="text-[#c5a059] w-5 h-5 md:w-6 md:h-6 stroke-[1.5]" />,
+    title: "PROFESSIONAL MEASURING",
+    desc: "Accurate measurements for a perfect fit, including large and custom windows."
+  },
+  {
+    icon: <Wrench className="text-[#c5a059] w-5 h-5 md:w-6 md:h-6 stroke-[1.5]" />,
+    title: "EXPERT INSTALLATION",
+    desc: "Our certified team ensures your window treatments are installed flawlessly.",
+  },
+  {
+    icon: <Zap className="text-[#c5a059] w-5 h-5 md:w-6 md:h-6 stroke-[1.5]" />,
+    title: "MOTORIZATION & AUTOMATION",
+    desc: "Control your shades effortlessly with smart home integration and remotes."
+  }
+];
+
+export default function WhatWeOffer() {
   return (
     <section className="bg-[#FAF8F5] py-16 md:py-24 px-4 sm:px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto text-center mb-12 md:mb-16">

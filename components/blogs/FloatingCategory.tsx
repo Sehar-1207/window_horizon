@@ -1,13 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 
+interface Categories{
+  label:string,
+  href:string
+}
+const categories: Categories[] = [
+  { label: "Local Design Guides", href: "#" },
+  { label: "Product Comparison Guides", href: "#" },
+  { label: "Motorized Window Blinds and Shades", href: "#" },
+  { label: "Window Treatment Trends", href: "#" }
+];
 export default function FloatingCategoryNav() {
-  const categories = [
-    { label: "Local Design Guides", href: "#" },
-    { label: "Product Comparison Guides", href: "#" },
-    { label: "Motorized Window Blinds and Shades", href: "#" },
-    { label: "Window Treatment Trends", href: "#" }
-  ];
 
   return (
     <div className="sticky top-28 z-40 w-full pointer-events-none overflow-x-auto scrollbar-none">

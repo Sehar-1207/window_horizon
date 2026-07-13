@@ -28,19 +28,19 @@ const TestimonialCard = ({ quote, author, location }: TestimonialCardProps) => (
   </div>
 );
 
+const testimonialsData = [
+  {
+    quote: "The team did an amazing job with our motorized shades. The installation was flawless and they handled all the COI paperwork for our building. Highly recommend!",
+    author: "Sarah M.",
+    location: "Upper East Side, Manhattan"
+  },
+  {
+    quote: "We needed window treatments for our entire home in Tenafly. They provided excellent design guidance and the quality is outstanding. Worth every penny!",
+    author: "Michael R.",
+    location: "Tenafly, Bergen County"
+  }
+];
 export default function TestimonialsSection() {
-  const testimonialsData = [
-    {
-      quote: "The team did an amazing job with our motorized shades. The installation was flawless and they handled all the COI paperwork for our building. Highly recommend!",
-      author: "Sarah M.",
-      location: "Upper East Side, Manhattan"
-    },
-    {
-      quote: "We needed window treatments for our entire home in Tenafly. They provided excellent design guidance and the quality is outstanding. Worth every penny!",
-      author: "Michael R.",
-      location: "Tenafly, Bergen County"
-    }
-  ];
 
   return (
     <section className="w-full bg-white py-16 md:py-24 overflow-hidden">
